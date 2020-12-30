@@ -15,7 +15,7 @@ d) in the _Personified concepts_, if you click on `Nike`, it takes you to a page
 
 ### Installing
 ``` 
-git clone <>
+git clone https://github.com/muktabehera/Wiki_Metis_Automation.git
 virtualenv venv
 source venv/bin/activate 
 pip install -r requirements.txt
