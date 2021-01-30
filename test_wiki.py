@@ -61,6 +61,7 @@ class TestMetis:
             r = requests.get(item)
             assert r.status_code == 200
 
+    @pytest.mark.test1
     def test_Nike(self):
 
         '''
@@ -111,7 +112,7 @@ class TestMetis:
         familytree = self.driver.find_element_by_css_selector("#mw-content-text > div.mw-parser-output > table.toccolours").is_displayed()
         assert familytree
 
-        #test
+
 
 
 
