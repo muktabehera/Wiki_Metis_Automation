@@ -8,7 +8,8 @@ from selenium.webdriver.common.by import By
 
 @pytest.fixture()
 def setup(request):
-    driver = webdriver.Firefox(executable_path="lib\\drivers\\geckodriver.exe")
+    #driver = webdriver.Firefox(executable_path="lib\\drivers\\geckodriver.exe")
+    driver = webdriver.Firefox(executable_path="geckodriver")
     request.instance.driver = driver
     url = "https://en.wikipedia.org/wiki/Metis_(mythology)"
     driver.get(url)
