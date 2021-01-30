@@ -6,10 +6,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
 
+from selenium.webdriver.firefox.options import Options
+options = Options()
+options.headless = True
+
+
 @pytest.fixture()
 def setup(request):
     #driver = webdriver.Firefox(executable_path="lib\\drivers\\geckodriver.exe")
-    driver = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver")
+    #driver = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver")
+    driver = webdriver.Firefox(options=options)
     request.instance.driver = driver
     url = "https://en.wikipedia.org/wiki/Metis_(mythology)"
     driver.get(url)

@@ -20,5 +20,6 @@ install:
   - sudo ln -s /usr/local/share/geckodriver /usr/local/bin/geckodriver
   - echo `which geckodriver`
   - sudo chmod +x /usr/local/bin/geckodriver
+  - geckodriver --version
 script:
   - py.test -v -m test1
