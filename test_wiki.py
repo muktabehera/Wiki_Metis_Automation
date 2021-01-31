@@ -26,7 +26,7 @@ def setup(request):
 
 @pytest.mark.usefixtures("setup")
 class TestMetis:
-
+    @pytest.mark.test1
     def test_headings(self):
 
         '''
@@ -68,7 +68,7 @@ class TestMetis:
             r = requests.get(item)
             assert r.status_code == 200
 
-    @pytest.mark.test1
+
     def test_Nike(self):
 
         '''
